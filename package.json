@@ -1,0 +1,21 @@
+{
+  "name": "claude-code-sessions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Claude Code Session Manager - Web app for managing Claude Code projects and sessions",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:server": "pnpm --filter @claude-sessions/server dev",
+    "dev:web": "pnpm --filter @claude-sessions/web dev",
+    "build": "pnpm -r build",
+    "build:server": "pnpm --filter @claude-sessions/server build",
+    "build:web": "pnpm --filter @claude-sessions/web build",
+    "clean": "pnpm -r clean",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@9.15.4"
+}

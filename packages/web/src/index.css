@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom scrollbar */
+@layer base {
+  :root {
+    --color-accent: #d97706;
+    --color-accent-light: #f59e0b;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme(--color-gray-400) transparent;
+  }
+
+  .dark * {
+    scrollbar-color: theme(--color-gray-700) transparent;
+  }
+}
+
+/* Toast animation */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
